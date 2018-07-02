@@ -1,4 +1,7 @@
-workers Integer(ENV['WEB_CONCURRENCY'] || 2)
+if require 'os'
+  workers Integer(ENV['WEB_CONCURRENCY'] || 2) unless OS.windows?
+end
+
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
 threads threads_count, threads_count
 
