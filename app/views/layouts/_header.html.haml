@@ -1,0 +1,16 @@
+%nav.navbar.navbar-expand-md.bg-dark.navbar-dark.mb-4
+    .container
+        -#.d-flex.justify-content-start
+        = link_to "Logo", root_path, class: "navbar-brand"
+        %button.navbar-toggler{ data: { toggle: "collapse", target: '#navbar' }}
+            %span.navbar-toggler-icon
+        #navbar.collapse.navbar-collapse
+            %ul.navbar-nav
+                %li.nav-item
+                    = link_to "About",   about_path, class: "nav-link"
+                %li.nav-item
+                    = link_to "Help",    help_path, class: "nav-link"
+                %li.nav-item
+                    = link_to "Contact", contact_path, class: "nav-link"
+            %ul.nav.justify-content-end
+                test
