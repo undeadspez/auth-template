@@ -14,13 +14,13 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
 gem 'haml'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6'
+
+gem 'rails', '~> 5.1.6' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
 gem 'puma', '~> 3.7'
 
 # gem "rack-timeout", require:"rack/timeout/base"
-# Use SCSS for stylesheets
+
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
