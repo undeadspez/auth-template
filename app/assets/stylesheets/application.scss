@@ -1,1 +1,8 @@
 @import "bootstrap";
+@import "users";
+
+.debug_dump {
+    background: $gray-200;
+    @include border-radius;
+    @extend .w-100, .mt-4, .p-3;
+}
