@@ -72,6 +72,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25-x86-mingw32)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     haml (5.0.4)
@@ -99,7 +101,6 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.3-x86-mingw32)
       mini_portile2 (~> 2.3.0)
-    os (1.0.0)
     pg (1.0.0-x86-mingw32)
     popper_js (1.12.9)
     public_suffix (3.0.2)
@@ -194,10 +195,10 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  font-awesome-rails (~> 4.7.0.4)
   haml
   jbuilder (~> 2.5)
   jquery-rails
-  os
   pg
   puma (~> 3.7)
   rails (~> 5.1.6)
@@ -215,4 +216,4 @@ RUBY VERSION
    ruby 2.3.3p222
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
