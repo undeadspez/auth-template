@@ -1,27 +1,27 @@
 - provide(:title, 'Sign up')
 
 .row
-    .col-md-6.offset-md-3
+    .col-md-4.offset-md-4
         %h1.mb-4.text-center Sign up
         = form_for @user, url: signup_path do |f|
             = render 'shared/error_messages'
 
             .form-group
                 = f.label :name
-                = f.text_field :name, class: "form-control",
-                    autocomplete: if Rails.env.development? then "off" else "on" end
+                = f.text_field :name, class: 'form-control',
+                    autocomplete: Rails.env.development? && 'off' || 'on'
 
             .form-group
                 = f.label :email
-                = f.email_field :email, class: "form-control",
-                    autocomplete: if Rails.env.development? then "off" else "on" end
+                = f.email_field :email, class: 'form-control',
+                    autocomplete: Rails.env.development? && 'off' || 'on'
 
             .form-group
                 = f.label :password
-                = f.password_field :password, class: "form-control"
+                = f.password_field :password, class: 'form-control'
 
             .form-group
-                = f.label :password_confirmation, "Confirmation"
-                = f.password_field :password_confirmation, class: "form-control"
+                = f.label :password_confirmation, 'Confirmation'
+                = f.password_field :password_confirmation, class: 'form-control'
 
-            = f.submit "Create my account", class: "w-100 btn btn-primary"
+            = f.submit 'Create my account', class: 'w-100 btn btn-primary'

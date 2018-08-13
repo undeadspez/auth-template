@@ -1,7 +1,7 @@
 - provide(:title, "Login")
 
 .row
-    .col-md-6.offset-md-3
+    .col-md-4.offset-md-4
         %h1.mb-4.text-center Login
         = form_for :session, url: login_path do |f|
 
@@ -18,7 +18,8 @@
                 = f.label :remember_me, class: "custom-control-label" do
                     Remember me on this computer
 
-            = f.submit "Log in", class: "w-100 btn btn-primary"
+            .form-group
+                = f.submit "Log in", class: "w-100 btn btn-primary"
         %p
             New user?&nbsp;
             = link_to "Sign up now!", signup_path

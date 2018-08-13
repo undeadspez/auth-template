@@ -2,9 +2,9 @@ module ApplicationHelper
 
   def full_title(title)
     if title
-      "Auth template | #{title}"
+      "#{title} | #{Rails.configuration.app_name}"
     else
-      "Auth template"
+      "#{Rails.configuration.app_name}"
     end
   end
   
