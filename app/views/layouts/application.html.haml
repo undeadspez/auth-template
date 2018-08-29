@@ -1,7 +1,7 @@
 !!! 5
 %html
     %head
-        %title= full_title(yield(:title))
+        %title= full_title(yield :title)
         = csrf_meta_tags
 
         = favicon_link_tag
@@ -9,6 +9,9 @@
         = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
         = render 'layouts/shim'
+
+        = yield :prev_page
+        = yield :next_page
 
     %body
         = render 'layouts/header'

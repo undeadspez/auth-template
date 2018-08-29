@@ -1,6 +1,7 @@
 - provide(:title, 'Home')
 
 .jumbotron
-    %h1
-        != "Welcome to the #{@app_name}!&nbsp;"
-        = link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary'
+    %h1.display-4
+        ! Welcome to the #{@app_name}!&nbsp;
+        - if not logged_in?
+            = link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary'

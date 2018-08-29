@@ -1,34 +1,36 @@
 %nav.navbar.navbar-expand-md.bg-dark.navbar-dark.mb-4
     .container
         -#.d-flex.justify-content-start
-        = link_to "Logo", root_path, class: "navbar-brand"
-        %button.navbar-toggler{ data: { toggle: "collapse", target: '#navbar' }}
+        = link_to Rails.configuration.app_name, root_path, class: 'navbar-brand'
+        %button.navbar-toggler{ data: { toggle: 'collapse', target: '#navbar' } }
             %span.navbar-toggler-icon
         #navbar.collapse.navbar-collapse
             %ul.navbar-nav.mr-auto
                 %li.nav-item
-                    = link_to "About",   about_path, class: "nav-link"
+                    = link_to 'About',   about_path,   class: 'nav-link'
                 %li.nav-item
-                    = link_to "Help",    help_path, class: "nav-link"
+                    = link_to 'Help',    help_path,    class: 'nav-link'
                 %li.nav-item
-                    = link_to "Contact", contact_path, class: "nav-link"
+                    = link_to 'Contact', contact_path, class: 'nav-link'
             %ul.navbar-nav
                 - if not logged_in?
                     %li.nav-item
-                        = link_to signup_path, class: "nav-link" do
-                            = fa_icon "user-plus", text: "Sign up"
+                        = link_to signup_path, class: 'nav-link' do
+                            = fa_icon 'user-plus', text: 'Sign up'
                     %li.nav-item
-                        = link_to login_path, class: "nav-link" do
-                            = fa_icon "sign-in", text: "Log in"
+                        = link_to login_path, class: 'nav-link' do
+                            = fa_icon 'sign-in', text: 'Log in'
                 - else
+                    %li.nav-item
+                        = link_to 'Users', users_path, class: 'nav-link'
                     %li.nav-item.dropdown
                         %a.nav-link.dropdown-toggle#account-dropdown_menu{ href: '#', 
-                            data: { toggle: "dropdown" }, 
+                            data: { toggle: 'dropdown' }, 
                             aria: { haspopup: true, expanded: false } }
                             Account
                         .dropdown-menu{ aria: { labeledby: 'account-dropdown_menu' } }
-                            = link_to "Profile", current_user, class: "dropdown-item"
-                            = link_to "Settings", current_user, class: "dropdown-item"
+                            = link_to 'Profile', current_user, class: 'dropdown-item'
+                            = link_to 'Settings', edit_user_path(current_user), class: 'dropdown-item'
                             .dropdown-divider
-                            = link_to logout_path, method: :delete, class: "dropdown-item" do
-                                = fa_icon "sign-out", text: "Log out"
+                            = link_to logout_path, method: :delete, class: 'dropdown-item' do
+                                = fa_icon 'sign-out', text: 'Log out'

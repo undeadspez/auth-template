@@ -1,0 +1,24 @@
+- provide :prev_page do
+    - @prev = prev_path users_path, @current_page
+    %link(rel="prev" href=@prev)
+
+- provide :next_page do
+    - @next = next_path users_path, @current_page
+    %link(rel="next" href=@next)
+
+%nav(aria-label="user navigation")
+    %ul.pagination.justify-content-center
+        %li.page-item
+            = link_to '#', class: 'page-link', tabindex: -1 do
+                = fa_icon 'angle-double-left'
+        %li.page-item
+            = link_to (@current_page - 1), @prev, class: 'page-link'
+        %li.page-item.active
+            = link_to '#', class: 'page-link' do
+                = @current_page
+                %span.sr-only (current)
+        %li.page-item
+            = link_to (@current_page + 1), @next, class: 'page-link'
+        %li.page-item
+            = link_to '#', class: 'page-link' do
+                = fa_icon 'angle-double-right'
