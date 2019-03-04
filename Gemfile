@@ -9,7 +9,7 @@ end
 
 gem 'sprockets-rails', '>= 2.3.2'
 
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '>= 4.3.1'
 
 gem 'font-awesome-rails', '~> 4.7.0.4'
 
@@ -39,7 +39,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
 gem 'faker', '~> 1.9.1'
+
 gem 'will_paginate', '~> 3.1.6'
 
 gem 'rails-controller-testing', group: :test
