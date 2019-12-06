@@ -19,7 +19,7 @@ gem 'haml'
 
 gem 'rails', '~> 5.1.6' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 
 # gem "rack-timeout", require:"rack/timeout/base"
 
